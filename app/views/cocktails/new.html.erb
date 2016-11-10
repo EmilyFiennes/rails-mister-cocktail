@@ -1,0 +1,13 @@
+<h1 class="text-center"> Enter a new cocktail </h1>
+
+
+<div class="container form">
+<%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name, input_html: {style: 'width: 200px'} %>
+    <%= f.button :submit, input_html: {style: 'width: 200px'} %>
+  <% end %>
+</div>
+
+
+
+<!-- s, collection: @ingredients, input_html { multiple: true} -->

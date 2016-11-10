@@ -21,3 +21,34 @@ STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
 ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
 DETAIL:  Key (id)=(70) is still referenced from table "doses".
 STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  database "rails-mister-cocktail_development" already exists
+STATEMENT:  CREATE DATABASE "rails-mister-cocktail_development" ENCODING = 'unicode'
+ERROR:  database "rails-mister-cocktail_test" already exists
+STATEMENT:  CREATE DATABASE "rails-mister-cocktail_test" ENCODING = 'unicode'
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(79) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(95) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(111) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(127) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(143) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(159) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(175) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(191) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(207) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1

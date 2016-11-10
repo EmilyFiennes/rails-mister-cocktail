@@ -1,0 +1,9 @@
+<h1>add a dose</h1>
+
+<div class="container form">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, input_html: {style: 'width: 200px'} %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit, input_html: {style: 'width: 200px'} %>
+  <% end %>
+</div>

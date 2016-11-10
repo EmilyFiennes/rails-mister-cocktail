@@ -1,0 +1,34 @@
+<h1> <%= @cocktail.name %> </h1>
+
+
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+
+
+<%= link_to "All cocktails", root_path, class: "btn-medium" %>
+
+raise
+
+  <ul class="list-group">
+    <div class="container form"
+    <% @cocktail.doses.each do |dose| %>
+      <% if dose.persisted? %>
+        <li class="list-group-item">
+          <p><%= dose.description %> <%= dose.ingredient.name %></p>
+          <p><%= link_to "Delete this dose", dose_path(dose), method: :delete %></p>
+        </li>
+      <% end %>
+    <% end %>
+    </div>
+  </ul>
+
+<ul class="list-group">
+  <div class="container form">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, input_html: {style: 'width: 200px'} %>
+      <%= f.association :ingredient %>
+      <%= f.button :submit, input_html: {style: 'width: 200px'} %>
+    <% end %>
+  </div>
+</ul>
+
+
