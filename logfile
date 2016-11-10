@@ -6,3 +6,7 @@ FATAL:  database "Emily" does not exist
 ERROR:  role "Emily" already exists
 STATEMENT:  CREATE ROLE "Emily" NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
 FATAL:  database "Emily" does not exist
+ERROR:  database "rails-mister-cocktail_development" already exists
+STATEMENT:  CREATE DATABASE "rails-mister-cocktail_development" ENCODING = 'unicode'
+ERROR:  database "rails-mister-cocktail_test" already exists
+STATEMENT:  CREATE DATABASE "rails-mister-cocktail_test" ENCODING = 'unicode'
