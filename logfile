@@ -10,3 +10,14 @@ ERROR:  database "rails-mister-cocktail_development" already exists
 STATEMENT:  CREATE DATABASE "rails-mister-cocktail_development" ENCODING = 'unicode'
 ERROR:  database "rails-mister-cocktail_test" already exists
 STATEMENT:  CREATE DATABASE "rails-mister-cocktail_test" ENCODING = 'unicode'
+ERROR:  column ingredients.cocktail_id does not exist at character 42
+STATEMENT:  SELECT COUNT(*) FROM "ingredients" WHERE "ingredients"."cocktail_id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(52) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(61) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
+DETAIL:  Key (id)=(70) is still referenced from table "doses".
+STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
