@@ -1,0 +1,8 @@
+LOG:  database system was shut down at 2016-11-10 10:28:11 CET
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "Emily" does not exist
+ERROR:  role "Emily" already exists
+STATEMENT:  CREATE ROLE "Emily" NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
+FATAL:  database "Emily" does not exist
