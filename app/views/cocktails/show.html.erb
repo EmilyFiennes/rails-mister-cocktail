@@ -1,22 +1,26 @@
-<h1> <%= @cocktail.name %> </h1>
 
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+<div class="container">
 
-
-<ul class="list-group">
-  <div class="container">
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description, input_html: {style: 'width: 200px'} %>
-      <%= f.association :ingredient %>
-      <%= f.button :submit, input_html: {style: 'width: 200px'} %>
+<div id="photo">
+  <% if @cocktail.photos? %>
+    <% @cocktail.photos.each do |photo| %>
+      <%= cl_image_tag photo.path, width: 200, height: 300, crop: :fill, effect: :vignette %>
     <% end %>
-  </div>
-</ul>
+  <% end %>
+</div>
 
-
- <ul class="list-group">
-    <div class="container"
+<div class="cocktail">
+  <ul class="list-group">
+    <h1> <%= @cocktail.name %> </h1>
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description, input_html: {style: 'width: 400px'} %>
+        <%= f.association :ingredient, input_html: {style: 'width: 400px'}  %>
+        <%= f.button :submit, {style: 'width: 400px'} %>
+      <% end %>
+  </ul>
+  <ul class="list-group list-inline">
     <% @cocktail.doses.each do |dose| %>
       <% if dose.persisted? %>
         <li class="list-group-item">
@@ -25,15 +29,9 @@
         </li>
       <% end %>
     <% end %>
-    </div>
   </ul>
-
-<div class="container">
-  <% if @cocktail.photos? %>
-    <% @cocktail.photos.each do |photo| %>
-      <%= cl_image_tag photo.path, width: 200, height: 300, crop: :fill %>
-    <% end %>
-  <% end %>
 </div>
 
-<p><%= link_to "Delete this cocktail", cocktail_path(@cocktail), class: "btn btn-danger", method: :delete %></p>
+
+<p><%= link_to "Delete this cocktail", cocktail_path(@cocktail), class: "btn btn-danger", style: 'width: 400px', method: :delete %></p>
+</div>
