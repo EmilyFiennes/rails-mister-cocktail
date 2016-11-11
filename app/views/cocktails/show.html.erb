@@ -1,10 +1,10 @@
 <h1> <%= @cocktail.name %> </h1>
 
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
 
-<%= link_to "All cocktails", root_path, class: "btn-medium" %>
+<%= link_to "All cocktails", root_path, class: "btn btn-primary" %>
 
 
 
