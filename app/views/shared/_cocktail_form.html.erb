@@ -1,0 +1,7 @@
+
+
+<%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name, input_html: {style: 'width: 200px'} %>
+    <%= f.input :photos, as: :attachinary %>
+    <%= f.button :submit, input_html: {style: 'width: 200px'} %>
+  <% end %>

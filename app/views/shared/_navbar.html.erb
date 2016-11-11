@@ -17,7 +17,7 @@
     </form>
 
     <!-- Text link -->
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a>
+    <%= link_to "Contact", "mailto:contact@mistercocktail.com", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Text link -->
     <a href="" class="navbar-wagon-item navbar-wagon-link">Team</a>
@@ -43,7 +43,7 @@
     </div>
 
     <!-- Button (call-to-action) -->
-    <a href="" class="navbar-wagon-item navbar-wagon-button btn">Post stuff</a>
+    <%= link_to "New cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
