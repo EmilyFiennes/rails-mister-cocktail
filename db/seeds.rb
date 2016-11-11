@@ -10,3 +10,10 @@ ingredient = JSON.parse(ingredient_serialized)
 ingredient["drinks"].each { |i| Ingredient.create(name: i["strIngredient1"].capitalize) }
 
 puts 'Seed done'
+
+
+# ingredients = JSON.parse(open(irl).read)["drinks"]
+
+# ingredients.map! { |ingredient| {name: ingredient["strIngredient1"] }}
+
+# Ingredient.create(ingredients)

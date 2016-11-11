@@ -6,7 +6,7 @@
 
 <%= link_to "All cocktails", root_path, class: "btn-medium" %>
 
-raise
+
 
   <ul class="list-group">
     <div class="container form"
@@ -31,4 +31,4 @@ raise
   </div>
 </ul>
 
-
+<p><%= link_to "Delete this cocktail", cocktail_path(@cocktail), method: :delete %></p>

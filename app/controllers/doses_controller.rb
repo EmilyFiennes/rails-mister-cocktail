@@ -6,7 +6,7 @@ class DosesController < ApplicationController
 
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
-    @dose = @cocktail.doses.new
+    @dose = @cocktail.doses.new #cocktail has many doses - plural
     @ingredient = Ingredient.new
   end
 
@@ -14,16 +14,16 @@ class DosesController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = @cocktail.doses.new(dose_params)
     if @dose.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktail_path(@cocktail) #render 'cocktails/show'
     else
-      render :new
+      render 'cocktails/show'
     end
   end
 
   def destroy
     @dose = Dose.find(params[:id])
-    @dose.destroy
-    redirect_to cocktail_path
+    @dose.destroy #deletes from db but doesn't delete the instance which still has the id of the cocktail
+    redirect_to cocktail_path @dose.cocktail
   end
 
   private
