@@ -13,6 +13,19 @@
 
   <body>
     <%= render 'shared/navbar' %>
+    <% if flash[:notice] %>
+      <div class="alert alert-info fade in">
+        <button class="close" data-dismiss="alert">×</button>
+      <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="alert alert-warning fade in">
+        <button class="close" data-dismiss="alert">x</button>
+      <%= flash[:alert] %>
+      </div>
+    <% end %>
 
     <%= yield %>
 

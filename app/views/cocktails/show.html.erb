@@ -13,7 +13,7 @@
 <div class="cocktail">
   <ul class="list-group">
     <h1> <%= @cocktail.name %> </h1>
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <h4> Fill in the form below to add a dose to the <%= @cocktail.name %></h4>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description, input_html: {style: 'width: 400px'} %>
         <%= f.association :ingredient, input_html: {style: 'width: 400px'}  %>
