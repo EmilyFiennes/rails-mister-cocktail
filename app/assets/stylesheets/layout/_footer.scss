@@ -1,1 +1,26 @@
-// Your footer style
+#footer {
+  background: #333333;
+  color: #CCCCCC;
+  padding: 20px 0;
+}
+
+#footer ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#footer a {
+  color: #CCCCCC;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
+}
+
+#footer a:hover {
+  color: #5BC0DE;
+}
+
+#footer p {
+  padding-top: 20px;
+}
+

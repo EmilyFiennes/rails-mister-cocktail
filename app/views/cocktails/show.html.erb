@@ -1,6 +1,8 @@
+<% content_for(:title) do %>
+  <%= @cocktail.name %>
+<% end %>
 
-
-<div class="container">
+<div class="container page-container">
 
 <div id="photo">
   <% if @cocktail.photos? %>
