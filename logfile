@@ -52,3 +52,6 @@ STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
 ERROR:  update or delete on table "ingredients" violates foreign key constraint "fk_rails_961afcf26a" on table "doses"
 DETAIL:  Key (id)=(207) is still referenced from table "doses".
 STATEMENT:  DELETE FROM "ingredients" WHERE "ingredients"."id" = $1
+ERROR:  column doses.desription does not exist at character 68
+HINT:  Perhaps you meant to reference the column "doses.description".
+STATEMENT:  SELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."desription" = $2
